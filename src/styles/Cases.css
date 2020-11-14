@@ -1,0 +1,91 @@
+.cases {
+  height: 50vh;
+  height: calc(var(--vh, 1vh) * 50);
+}
+
+.cases-navigation {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 6;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+.cases-arrow {
+  background: rgba(0, 0, 0, 0.4);
+  height: 72px;
+  width: 72px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cases-arrow > svg {
+  color: var(--white);
+  height: 28px;
+  width: 28px;
+}
+
+.cases-arrow.disabled {
+  opacity: 0.3;
+}
+
+.case {
+  position: relative;
+  background: var(--black);
+  cursor: pointer;
+}
+
+.case:hover > .case-image {
+  opacity: 0.4;
+}
+
+.case-details {
+  width: 33.3333vw;
+  height: 50vh;
+  height: calc(var(--vh, 1vh) * 50);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px;
+  box-sizing: border-box;
+  z-index: 1;
+  position: relative;
+}
+
+.case-details > span {
+  margin-top: 156px;
+  font-size: 1.6rem;
+  opacity: 0.8;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.case-details > h2 {
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+  width: 85%;
+  margin-top: 16px;
+  color: var(--white);
+}
+.case-image {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0.65;
+  transition: 0.4s cubic-bezier(0.6, -0.05, 0.1, 0.99);
+}
+
+.case-image > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

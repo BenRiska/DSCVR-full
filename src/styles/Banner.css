@@ -1,0 +1,62 @@
+.main {
+  height: 50vh;
+  background-color: var(--white);
+}
+
+.banner-row {
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 0 32px;
+}
+
+.banner-row > h2 {
+  font-size: 3rem;
+  line-height: 4.2rem;
+  font-weight: 700;
+  z-index: 10;
+  color: var(--white);
+  mix-blend-mode: difference;
+  padding-top: 18vh;
+}
+
+.banner-row > .line {
+  margin-bottom: 8px;
+  height: 56px;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-row > .line > span {
+  position: absolute;
+}
+
+.btn-row {
+  width: 256px;
+  position: relative;
+  z-index: 2;
+}
+
+.btn-row > a {
+  font-size: 1.6rem;
+  color: var(--black);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.btn-row > a > svg {
+  margin-left: 16px;
+  border: 2px solid var(--black);
+  padding: 12px;
+  height: 24px;
+  width: 24px;
+  border-radius: 100px;
+  transition: 0.4s ease-in-out;
+}
+
+.btn-row:hover > a > svg {
+  background: var(--black);
+  color: var(--white);
+}

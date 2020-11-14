@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&display=swap");
+:root {
+  --black: #000000;
+  --white: #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body,
+html {
+  user-select: none;
+  background: var(--white);
+  overscroll-behavior: none;
+  margin: 0;
+  font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  width: 1560px;
+  min-width: 1560px;
+  margin: 0 auto;
+  height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.container-fluid {
+  width: 100%;
+  height: 100%;
+}
+
+.v-center {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.space-between {
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.row {
+  display: flex;
+  height: 100%;
+  padding: 0 32px;
+}
+
+.top {
+  height: 50vh;
+  position: absolute;
+  width: 100%;
+  z-index: 8;
+}
+
+.overlay-top {
+  position: absolute;
+  height: 100%;
+  width: 33.333vw;
+  background: var(--black);
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.overlay-top:nth-child(2) {
+  left: 33.333%;
+}
+
+.overlay-top:nth-child(3) {
+  left: 66.666%;
+}
+
+.bottom {
+  height: 50vh;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 8;
+}
+
+.overlay-bottom {
+  position: absolute;
+  height: 100%;
+  width: 33.333vw;
+  background: var(--black);
+  bottom: 0;
+  right: 66.666%;
+}
+
+.overlay-bottom:nth-child(2) {
+  right: 33.333%;
+}
+
+.overlay-bottom:nth-child(3) {
+  right: 0;
+}
+
+.app {
+  z-index: 2;
+  transform: translateY(0);
+  position: relative;
+}
+
+.page {
+  height: 100vh;
+  width: 100%;
+  background: var(--white);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.no-padding {
+  padding: 0 !important;
 }
